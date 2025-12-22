@@ -3,3 +3,5 @@ pyyaml
 requests
 loguru
 allure-pytest
+selenium
+webdriver-manager
