@@ -10,4 +10,4 @@ class ConfigReader:
             self.config = yaml.safe_load(file)
     
     def get(self,key):
-        return self.config(key)
+        return self.config.get(key)
