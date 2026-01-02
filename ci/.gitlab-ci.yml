@@ -1,0 +1,22 @@
+image: python:3.11-slim
+
+stages:
+  - test
+
+variables:
+  ENV: "dev"
+
+before_script:
+  - python --version
+  - pip install --upgrade pip
+  - pip install -r requirements.txt
+
+test: 
+  stage: test
+  script:
+    - pytest
+  artifacts:
+    when: always
+    paths:
+      - reports/allure-results
+    expire_in: 7 days
