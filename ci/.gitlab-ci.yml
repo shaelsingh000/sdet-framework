@@ -1,13 +1,22 @@
-image: docker:latest
-
-services:
-  - docker:dind
+image: python:3.11-slim
 
 stages:
   - test
 
-test:
+variables:
+  ENV: "dev"
+
+before_script:
+  - python --version
+  - pip install --upgrade pip
+  - pip install -r requirements.txt
+
+test: 
   stage: test
   script:
-    - docker build -t sdet-framework .
-    - docker run sdet-framework
+    - pytest
+  artifacts:
+    when: always
+    paths:
+      - reports/allure-results
+    expire_in: 7 days
