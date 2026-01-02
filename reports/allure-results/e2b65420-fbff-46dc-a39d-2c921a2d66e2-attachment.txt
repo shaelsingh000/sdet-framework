@@ -1,0 +1,1 @@
+[32mINFO    [0m WDM:logger.py:11 ====== WebDriver manager ======
