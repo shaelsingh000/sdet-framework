@@ -15,8 +15,10 @@ test:
   stage: test
   script:
     - pytest
+    - allure generate reports/allure-results -o reports/allure-report
   artifacts:
     when: always
     paths:
       - reports/allure-results
+      - reports/allure-report
     expire_in: 7 days
