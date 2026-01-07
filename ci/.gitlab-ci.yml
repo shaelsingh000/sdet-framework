@@ -1,24 +1,21 @@
 image: python:3.11-slim
 
 stages:
+  - lint
   - test
 
-variables:
-  ENV: "dev"
+lint:
+  stage: lint
+  script:
+    - pip install flake8
+    - flake8 .
 
-before_script:
-  - python --version
-  - pip install --upgrade pip
-  - pip install -r requirements.txt
-
-test: 
+ui_tests:
   stage: test
   script:
-    - pytest
-    - allure generate reports/allure-results -o reports/allure-report
+    - pip install -r requirements.txt
+    - pytest tests/ui --alluredir=allure-results
   artifacts:
     when: always
     paths:
-      - reports/allure-results
-      - reports/allure-report
-    expire_in: 7 days
+      - allure-results
