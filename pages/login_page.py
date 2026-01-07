@@ -1,15 +1,12 @@
-from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
+from selenium.webdriver.common.by import By
 
-class LoginPage:
+class LoginPage(BasePage):
     USERNAME = (By.ID, "username")
     PASSWORD = (By.ID, "password")
     SUBMIT = (By.ID, "login")
 
-    def __init__(self, browser):
-        self.browser = browser
-
     def login(self, user, password):
-        self.browser.type(self.USERNAME, user)
-        self.browser.type(self.PASSWORD, password)
-        self.browser.click(self.SUBMIT)
+        self.actions.send_keys(self.USERNAME, user)
+        self.actions.send_keys(self.PASSWORD, password)
+        self.actions.click(self.SUBMIT)
