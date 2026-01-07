@@ -16,3 +16,9 @@ class BrowserActions:
 
     def scroll_into_view(self, element):
         self.driver.execute_script("arguments[0].scrollIntoView(true);", element)
+
+    def upload_file(self, locator, file_path):
+        self.driver.find_element(*locator).send_keys(file_path)
+
+    def select_by_text(self, locator, text):
+        Select(self.driver.find_element(*locator)).select_by_visible_text(text)

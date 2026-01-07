@@ -1,0 +1,4 @@
+- No hard waits
+- Always wait for visibility
+- JS click only when normal click fails
+- Screenshots on failure
