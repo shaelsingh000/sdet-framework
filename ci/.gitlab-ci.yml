@@ -10,12 +10,16 @@ lint:
     - pip install flake8
     - flake8 .
 
+api_tests:
+  script:
+    - pytest tests/api -n auto
+
 ui_tests:
   stage: test
   script:
     - pip install -r requirements.txt
-    - pytest tests/ui --alluredir=allure-results
+    - pytest tests/ui -n 0
   artifacts:
     when: always
     paths:
-      - allure-results
+      - reports/allure-results
