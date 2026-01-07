@@ -2,6 +2,7 @@ import pytest
 import allure
 from utils.config_reader import ConfigReader
 from core.driver_factory import DriverFactory
+from core.browser_action import BrowserActions
 
 @pytest.fixture(scope="session")
 def load_config():
@@ -10,6 +11,7 @@ def load_config():
 @pytest.fixture(scope="function")
 def browser():
     driver = DriverFactory.get_driver()
+    actions = BrowserActions(driver)
     yield driver
     DriverFactory.quit_driver()
 
