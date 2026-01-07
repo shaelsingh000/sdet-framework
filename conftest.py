@@ -15,6 +15,7 @@ def browser():
     yield driver
     DriverFactory.quit_driver()
 
+
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item,call):
     outcome = yield
