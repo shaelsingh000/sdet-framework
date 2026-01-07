@@ -1,0 +1,1 @@
+2026-01-02T16:59:39.573484+0530| INFO | Chrome driver initialized successfully

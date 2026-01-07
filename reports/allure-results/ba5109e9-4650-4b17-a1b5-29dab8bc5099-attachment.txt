@@ -1,0 +1,6 @@
+2026-01-07T12:33:31.174232+0530| INFO | GET https://reqres.in/api/login?input=' OR 1=1 --
+2026-01-07T12:33:31.833673+0530| WARNING | Expected 400 but got 403
+2026-01-07T12:33:31.833932+0530| WARNING | Potential SQLi detected: ' OR 1=1 --
+2026-01-07T12:33:31.834026+0530| INFO | GET https://reqres.in/api/login?input='; DROP TABLE users; --
+2026-01-07T12:33:32.222055+0530| WARNING | Expected 400 but got 403
+2026-01-07T12:33:32.223688+0530| WARNING | Potential SQLi detected: '; DROP TABLE users; --

@@ -1,0 +1,4 @@
+2026-01-02 16:47:51 | INFO | api_client.py:12 | GET https://api.example.com/login?input=' OR 1=1 --
+2026-01-02 16:47:54 | INFO | api_client.py:12 | GET https://api.example.com/login?input=' OR 1=1 --
+2026-01-02 16:47:56 | INFO | api_client.py:12 | GET https://api.example.com/login?input=' OR 1=1 --
+2026-01-02 16:47:59 | INFO | driver_factory.py:34 | Chrome driver initialized successfully

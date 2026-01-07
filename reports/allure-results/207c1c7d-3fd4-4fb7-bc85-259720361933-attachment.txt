@@ -1,0 +1,6 @@
+2026-01-07T12:33:35.702853+0530| INFO | GET https://reqres.in/api/invalid-endpoint
+2026-01-07T12:33:36.134583+0530| WARNING | Expected 200 but got 403
+2026-01-07T12:33:38.156358+0530| INFO | GET https://reqres.in/api/invalid-endpoint
+2026-01-07T12:33:38.606079+0530| WARNING | Expected 200 but got 403
+2026-01-07T12:33:40.628624+0530| INFO | GET https://reqres.in/api/invalid-endpoint
+2026-01-07T12:33:41.316098+0530| WARNING | Expected 200 but got 403

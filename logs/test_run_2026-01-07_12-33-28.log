@@ -1,0 +1,13 @@
+2026-01-07 12:33:31 | INFO | api_client.py:12 | GET https://reqres.in/api/login?input=' OR 1=1 --
+2026-01-07 12:33:31 | WARNING | api_client.py:15 | Expected 400 but got 403
+2026-01-07 12:33:31 | WARNING | security_client.py:9 | Potential SQLi detected: ' OR 1=1 --
+2026-01-07 12:33:31 | INFO | api_client.py:12 | GET https://reqres.in/api/login?input='; DROP TABLE users; --
+2026-01-07 12:33:32 | WARNING | api_client.py:15 | Expected 400 but got 403
+2026-01-07 12:33:32 | WARNING | security_client.py:9 | Potential SQLi detected: '; DROP TABLE users; --
+2026-01-07 12:33:35 | INFO | api_client.py:12 | GET https://reqres.in/api/invalid-endpoint
+2026-01-07 12:33:36 | WARNING | api_client.py:15 | Expected 200 but got 403
+2026-01-07 12:33:38 | INFO | api_client.py:12 | GET https://reqres.in/api/invalid-endpoint
+2026-01-07 12:33:38 | WARNING | api_client.py:15 | Expected 200 but got 403
+2026-01-07 12:33:40 | INFO | api_client.py:12 | GET https://reqres.in/api/invalid-endpoint
+2026-01-07 12:33:41 | WARNING | api_client.py:15 | Expected 200 but got 403
+2026-01-07 12:33:42 | INFO | driver_factory.py:34 | Chrome driver initialized successfully

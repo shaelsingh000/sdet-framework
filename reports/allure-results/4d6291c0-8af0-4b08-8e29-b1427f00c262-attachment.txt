@@ -1,0 +1,3 @@
+2026-01-02T16:47:51.799138+0530| INFO | GET https://api.example.com/login?input=' OR 1=1 --
+2026-01-02T16:47:54.520087+0530| INFO | GET https://api.example.com/login?input=' OR 1=1 --
+2026-01-02T16:47:56.747447+0530| INFO | GET https://api.example.com/login?input=' OR 1=1 --
