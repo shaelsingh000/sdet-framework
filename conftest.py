@@ -14,11 +14,11 @@ def browser():
     DriverFactory.quit_driver()
 
 @pytest.hookimpl(hookwrapper=True)
-def pytest_runtest_makereport(item):
+def pytest_runtest_makereport(item,call):
     outcome = yield
     rep = outcome.get_result()
     if rep.when == "call" and rep.failed:
-        driver = item.funcargs.get(driver)
+        driver = item.funcargs.get("driver",None)
         if driver:
             allure.attach(
                 driver.get_screenshot_as_png(),
